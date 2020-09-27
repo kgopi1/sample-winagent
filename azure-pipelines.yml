@@ -18,5 +18,5 @@ steps:
   displayName: "Create new directory step"
   name: "Directorycreation"
 
-- script: echo $pwd
+- script: powershell $pwd
   displayName: Get the workdir 
