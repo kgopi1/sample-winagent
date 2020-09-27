@@ -25,6 +25,11 @@ steps:
 - script: powershell try { cd pwsh } catch { write-host "no dir" }finally { ls }
   displayName: list the contents
 
+
+- script: powershell $pwd
+  workingDirectory: pwsh/azuread
+  displayName: GetWorkdir 
+
 - script: powershell try { install-sync.ps1 } catch {write-host "unable to install"} 
   workingDirectory: pwsh/azuread
   displayName: install-azuread
