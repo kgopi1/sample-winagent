@@ -7,26 +7,21 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: azselfpool
+  vmImage: 'az-kg-win-agent'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-  condition: 
-  continueOnError:
-- task: PowerShellOnTargetMachines@3
-  inputs:
-    Machines: 'testvm'
-    UserName: 'gopi'
-    UserPassword: 'tcs$1234'
-    InlineScript: |
-      # Write your powershell commands here.
+  
+# - task: PowerShellOnTargetMachines@3
+#   inputs:
+#     Machines: 'testvm'
+#     UserName: 'gopi'
+#     UserPassword: 'tcs$1234'
+#     InlineScript: |
+#       # Write your powershell commands here.
       
-      Write-Output "Hello World"
-    failOnStderr: true
-    WorkingDirectory: 'C:\test\'
+#       Write-Output "Hello World"
+#     failOnStderr: true
+#     WorkingDirectory: 'C:\test\'
