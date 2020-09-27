@@ -19,6 +19,4 @@ function install-azmodule {
 
 
 ## main 
-#install-azmodule
-Install-PackageProvider -Name Nuget -Confirm:$false -Force
-Install-Module -Name AzureAD -Confirm:$false -Force
+install-azmodule
