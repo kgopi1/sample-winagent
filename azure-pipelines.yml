@@ -13,6 +13,10 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
 - powershell: "New-item -itemtype Directory c:\\testdir"
   displayName: "Create new directory step"
   name: "Directorycreation"
+
+- script: echo $pwd
+  displayName: Get the workdir 
