@@ -6,8 +6,6 @@ param (
 )
 
 ## Variables declaration
-$orgname = "kgopi10356"
-$pat_token = "3vch7xtb44x4kw56zxbmmdpjyxe4vhy4gevxpidwyyhsyz3dtora"
 $agent = "az-kg-win-agent"
 $url = "https://dev.azure.com/$orgname"
 $agent_url = "https://vstsagentpackage.azureedge.net/agent/2.175.2/vsts-agent-win-x64-2.175.2.zip"
