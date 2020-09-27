@@ -5,8 +5,9 @@ function install-module {
     )
 
     try {
-        Install-PackageProvider -Name Nuget -Confirm:$false -Force 
-        Install-Module -Name $ModuleName -Confirm:$false -Force
+        Write-Host $ModuleName
+        #Install-PackageProvider -Name Nuget -Confirm:$false -Force 
+        #Install-Module -Name $ModuleName -Confirm:$false -Force
     }
     catch {
         throw "unable to intall the modules"
@@ -16,6 +17,5 @@ function install-module {
 }
 
 
-
 ## main 
-install-module(AzureAD)
+install-module AzureAD
