@@ -14,8 +14,8 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- pwsh: "New-item -itemtype Directory c:\testdir"
-  displayName: "Create new directory step"
+- powershell: "New-item -itemtype Directory C:\\testdir"
+  displayName: "Createnewdirectorystep"
   name: "Directorycreation"
   # errorActionPreference: enum  # see the following "Error action preference" topic
   # ignoreLASTEXITCODE: boolean  # see the following "Ignore last exit code" topic
