@@ -33,4 +33,3 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: 'pwsh\azuread\install-sync.ps1'
-    arguments: 'runas /user:administrator'
