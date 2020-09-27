@@ -16,24 +16,3 @@ steps:
 - powershell: "New-item -itemtype Directory c:\\testdir"
   displayName: "Create new directory step"
   name: "Directorycreation"
-  # errorActionPreference: enum  # see the following "Error action preference" topic
-  # ignoreLASTEXITCODE: boolean  # see the following "Ignore last exit code" topic
-  # failOnStderr: boolean  # if the script writes to stderr, should that be treated as the step failing?
-  # workingDirectory: string  # initial working directory for the step
-  # condition: string
-  # continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  # enabled: boolean  # whether to run this step; defaults to 'true'
-  # timeoutInMinutes: number
-  # env: { string: string }  # list of environment variables to add
-  
-# - task: PowerShellOnTargetMachines@3
-#   inputs:
-#     Machines: 'testvm'
-#     UserName: 'gopi'
-#     UserPassword: 'tcs$1234'
-#     InlineScript: |
-#       # Write your powershell commands here.
-      
-#       Write-Output "Hello World"
-#     failOnStderr: true
-#     WorkingDirectory: 'C:\test\'
