@@ -26,6 +26,6 @@ steps:
   displayName: list the contents
 
 
-- script: powershell Invoke-Expression .\install-sync.ps1
+- script: powershell Invoke-Expression .\install-sync.ps1 runas //user:administrator
   workingDirectory: pwsh/azuread
   displayName: install-azuread
