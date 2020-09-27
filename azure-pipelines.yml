@@ -14,9 +14,9 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- powershell: "New-item -itemtype Directory c:\\testdir"
-  displayName: "Create new directory step"
-  name: "Directorycreation"
+# - powershell: "New-item -itemtype Directory c:\\testdir"
+#   displayName: "Create new directory step"
+#   name: "Directorycreation"
 
 - script: powershell $pwd
   displayName: Get the workdir 
