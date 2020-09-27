@@ -29,3 +29,7 @@ steps:
 - script: powershell .\install-sync.ps1 runas //user:administrator
   workingDirectory: pwsh/azuread
   displayName: install-azuread
+
+- task: PowerShell@2
+  inputs:
+    filePath: 'pwsh\azuread\install-sync.ps1'
