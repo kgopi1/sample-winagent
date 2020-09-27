@@ -14,9 +14,9 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-# - powershell: "New-item -itemtype Directory c:\\testdir"
-#   displayName: "Create new directory step"
-#   name: "Directorycreation"
+- powershell: Get-Service  | Where-Object {$_.DisplayName -like "Azure Pipelines Agent*"} | Select-Object DisplayName,Status
+  displayName: "Single line pwsh script"
+  name: PWSHinlinescript
 
 - script: powershell $pwd
   displayName: Get the workdir 
@@ -24,11 +24,6 @@ steps:
 
 - script: powershell try { cd pwsh } catch { write-host "no dir" }finally { ls }
   displayName: list the contents
-
-
-# - script: powershell .\install-sync.ps1 runas //user:administrator
-#   workingDirectory: pwsh/azuread
-#   displayName: install-azuread
 
 - task: PowerShell@2
   inputs:
