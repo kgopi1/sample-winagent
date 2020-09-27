@@ -20,3 +20,7 @@ steps:
 
 - script: powershell $pwd
   displayName: Get the workdir 
+
+
+- script: powershell cd pwsh && ls
+  displayName: list the contents
