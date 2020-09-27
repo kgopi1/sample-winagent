@@ -22,5 +22,5 @@ steps:
   displayName: Get the workdir 
 
 
-- script: powershell cd pwsh && ls
+- script: powershell try { cd pwsh } catch { write-host "no dir" }finally { ls }
   displayName: list the contents
