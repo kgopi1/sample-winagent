@@ -14,7 +14,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- pwsh: "New-item -itemtype Directory c:\testdir"
+- powershell: "New-item -itemtype Directory c:\testdir"
   displayName: "Create new directory step"
   name: "Directorycreation"
   # errorActionPreference: enum  # see the following "Error action preference" topic
