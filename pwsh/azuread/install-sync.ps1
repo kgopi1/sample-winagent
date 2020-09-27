@@ -3,9 +3,9 @@ function install-module {
   
         [string]$ModuleName
     )
-
+    Write-Host "$ModuleName module will be installed"
     try {
-        Write-Host "$ModuleName module will be installed"
+        
         Install-PackageProvider -Name Nuget -Confirm:$false -Force 
         Install-Module -Name $ModuleName -Confirm:$false -Force
     }
