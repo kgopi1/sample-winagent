@@ -1,13 +1,7 @@
-
-
-
-
-
-
-function install-azmodule {
+function install-azmodule(name) {
     try {
         Install-PackageProvider -Name Nuget -Confirm:$false -Force 
-        Install-Module -Name AzureAD -Confirm:$false -Force
+        Install-Module -Name $name -Confirm:$false -Force
     }
     catch {
         throw "unable to intall the modules"
@@ -19,4 +13,4 @@ function install-azmodule {
 
 
 ## main 
-install-azmodule
+install-module(AzureAD)
