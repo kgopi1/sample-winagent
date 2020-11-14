@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: azselfpool
+  vmImage: 'az-kg-lnx-agent'
+steps:
+- task: Bash@3
+  displayName: Execute-Local-Script
+  inputs:
+    targetType: 'inline' 
+    script: |
+      # Write your commands here
+      echo $(hostname)
+
+- task: Bash@3
+  displayName: Execute-Ansible-Playbook
+  inputs:
+    targetType: 'inline'
+    script: |
+      ansible-playbook $(System.DefaultWorkingDirectory)/postconfig-agent/sample-playbook.yml
