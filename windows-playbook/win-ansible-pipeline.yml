@@ -6,14 +6,13 @@ pool:
   vmImage: 'az-kg-lnx-agent'
 
 steps:
-  - 
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
       # Set ansible working dir
-      cd $HOME/ansible-windows
-  
+      cd "$HOME/ansible-windows"
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
