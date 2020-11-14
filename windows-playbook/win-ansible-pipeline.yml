@@ -7,6 +7,7 @@ pool:
 
 steps:
 - task: Bash@3
+  displayName: Set-WorkingDir
   inputs:
     targetType: 'inline'
     script: |
@@ -14,6 +15,15 @@ steps:
       cd "$HOME/ansible-windows"
 
 - task: Bash@3
+  displayName: List the Dir
+  inputs:
+    targetType: 'inline'
+    script: |
+      # list ansible working dir
+      ls -la 
+
+- task: Bash@3
+  displayName: Run Windows playbook
   inputs:
     targetType: 'inline'
     script: |
