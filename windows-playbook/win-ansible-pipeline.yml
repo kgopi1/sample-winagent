@@ -1,0 +1,6 @@
+trigger:
+- master
+
+pool:
+  name: azselfpool
+  vmImage: 'az-kg-lnx-agent'
