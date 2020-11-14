@@ -22,36 +22,36 @@
 
 - name: setup the windows ansible directory
   file:
-    path: $HOME/ansible-windows
+    path: ansible-windows
     state: directory
 
 
 - name: setup the windows ansible inventory directory
   file:
-    path: $HOME/ansible-windows/inventory
+    path: ansible-windows/inventory
     state: directory
 
 - name: setup the windows ansible inventory group_vars
   file:
-    path: $HOME/ansible-windows/inventory/group_vars
+    path: ansible-windows/inventory/group_vars
     state: directory
 
 - name: setup the ansible configuration file
   template:
     src: templates/ansible.cfg.j2
-    dest: $HOME/ansible-windows/ansible.cfg
+    dest: ansible-windows/ansible.cfg
 
 - name: setup the windows ansible inventory file
   template:
     src: templates/winhosts
-    dest: $HOME/ansible-windows/inventory/winhosts
+    dest: ansible-windows/inventory/winhosts
 
 - name: setup the windows ansible logging file
   file:
-    path: $HOME/ansible-windows/windowsansible.log
+    path: ansible-windows/windowsansible.log
     state: touch
 
 - name: setup the windows group_vars file
   template:
     src: templates/all
-    dest: $HOME/ansible-windows/inventory/group_vars/all
+    dest: ansible-windows/inventory/group_vars/all

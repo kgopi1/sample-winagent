@@ -3,7 +3,7 @@
   hosts: win
   become: true
   tasks:
-  - name: Ensure 7-Zip is not installed via win_package
-    win_package:
-      path: C:\temp\7z.msi
+  - name: Install IIS (Web-Server only)
+    ansible.windows.win_feature:
+      name: Web-Server
       state: present
