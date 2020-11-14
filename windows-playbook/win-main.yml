@@ -1,0 +1,9 @@
+---
+- name: Sample Windows playbook 
+  hosts: win
+  become: true
+  tasks:
+  - name: Ensure 7-Zip is not installed via win_package
+    win_package:
+      path: C:\temp\7z.msi
+      state: present
