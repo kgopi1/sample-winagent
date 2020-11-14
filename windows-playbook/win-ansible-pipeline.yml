@@ -18,4 +18,8 @@ steps:
     targetType: 'inline'
     script: |
       # list ansible working dir
-      ls -la 
+      win_playbookdir = $(System.DefaultWorkingDirectory)/windows-playbook
+      ansible-playbook $(win_playbookdir)/win-main.yml
+
+
+      
