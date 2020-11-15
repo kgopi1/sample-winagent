@@ -7,7 +7,7 @@ AZP_URL="https://dev.azure.com/$AZP_ORGNAME"
 mkdir -p ~/.agentdownload
 agentpath=~/.agentdownload/vsts-$agentversion.tar.gz
 curl $agenturl -o $agentpath &&  tar zxvf $agentpath
-sudo -u $SUDO_USER ./config.sh --unattended \
+./config.sh --unattended \
   --agent "${AZP_AGENT_NAME:-az-kg-lnx-agent}" \
   --url "$AZP_URL" \
   --auth PAT \
