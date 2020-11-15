@@ -6,6 +6,6 @@
     debug:
       msg: Hello world!
   
-  - name: Setting-Windows-Ansible
-    include_role:
-      name: ansible-windows
+  # - name: Setting-Windows-Ansible
+  #   include_role:
+  #     name: ansible-windows

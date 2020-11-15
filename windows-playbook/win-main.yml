@@ -4,6 +4,6 @@
   become: true
   tasks:
   - name: Install IIS (Web-Server only)
-    ansible.windows.win_feature:
+    win_feature:
       name: Web-Server
       state: present

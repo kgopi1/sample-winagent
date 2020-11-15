@@ -1,3 +1,6 @@
 1. Install ansible in agent pool machine
 
 run the sample-playbook ansible-playbook sample-playbook.yml 
+
+
+

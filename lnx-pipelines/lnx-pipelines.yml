@@ -16,11 +16,11 @@ steps:
     targetType: 'inline' 
     script: |
       # Write your commands here
-      echo $(hostname)
+      ls -la 
 
-- task: Bash@3
-  displayName: Execute-Ansible-Playbook
-  inputs:
-    targetType: 'inline'
-    script: |
-      ansible-playbook $(System.DefaultWorkingDirectory)/postconfig-agent/sample-playbook.yml
+# - task: Bash@3
+#   displayName: Execute-Ansible-Playbook
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       ansible-playbook $(System.DefaultWorkingDirectory)/postconfig-agent/sample-playbook.yml
