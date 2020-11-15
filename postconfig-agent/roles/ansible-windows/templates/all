@@ -1,7 +1,8 @@
 ---
 # ansible connection
-ansible_user: ansible
+ansible_user: administrator
 ansible_password: tcs$1234
+ansible_become_method=runas
 ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_scheme: https
